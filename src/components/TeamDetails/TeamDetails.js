@@ -6,6 +6,7 @@ import groupPhotoFemale from '../../images/female.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faYoutube, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faFlag, faMars, faFutbol, faClock } from '@fortawesome/free-solid-svg-icons';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 const TeamDetails = () => {
     const { idTeam } = useParams();
@@ -23,37 +24,38 @@ const TeamDetails = () => {
             <div className="teamBanner">
                 <img src={strTeamBanner} alt="team-banner" />
             </div>
-            <div className="container">
-                <div class="card mb-3" >
-                    <div class="row g-0">
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h3 class="card-title">{strTeam}</h3>
-                                <ul className="card-text list-unstyled">
-                                    <li><FontAwesomeIcon icon={faClock} />Founded: {intFormedYear}</li>
-                                    <li><FontAwesomeIcon icon={faFlag} />Country: {strCountry}</li>
-                                    <li><FontAwesomeIcon icon={faFutbol} />Sport type: {strSport}</li>
-                                    <li><FontAwesomeIcon icon={faMars} />Gender: {strGender}</li>
-                                </ul>
+            <div className="bg-dark text-muted">
+                <div className="container pt-3">
+                    <div className="card mb-3 team-detail-card p-1" >
+                        <div className="row g-0">
+                            <div className="col-md-8">
+                                <div className="card-body ms-5 text-white">
+                                    <h2 className="card-title">{strTeam}</h2>
+                                    <ul className="card-text list-unstyled fs-5">
+                                        <li><FontAwesomeIcon className="me-1" icon={faClock} />Founded: {intFormedYear}</li>
+                                        <li><FontAwesomeIcon className="me-1" icon={faFlag} />Country: {strCountry}</li>
+                                        <li><FontAwesomeIcon className="me-1" icon={faFutbol} />Sport type: {strSport}</li>
+                                        <li><FontAwesomeIcon className="me-1" icon={faMars} />Gender: {strGender}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                {strGender === 'Male' ? <img className="img-fluid" src={groupPhotoMale} alt="team" /> : <img className="img-fluid" src={groupPhotoFemale} alt="team" />}
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            {strGender.toLowerCase() === 'male' ? <img className="img-fluid" src={groupPhotoMale} alt="team" /> : <img className="img-fluid" src={groupPhotoFemale} alt="team" />}
-                        </div>
                     </div>
-                </div>
-                <div>
-                    <p>{strDescriptionEN}</p>
-                    <p>{strStadiumDescription}</p>
-                </div>
-                <div className="social-links">
-                    <a href={strTwitter}><FontAwesomeIcon className="icon" icon={faTwitter} /></a>
-                    <a href={strFacebook}><FontAwesomeIcon className="icon" icon={faFacebook} /></a>
-                    <a href={strInstagram}><FontAwesomeIcon className="icon" icon={faInstagram} /></a>
-                    <a href={strYoutube}><FontAwesomeIcon className="icon" icon={faYoutube} /></a>
-                    
-                    
-                    
+                    <div>
+                        <p className="lead">{strDescriptionEN}</p>
+                        <p className="lead">{strStadiumDescription}</p>
+                    </div>
+                    <div className="text-center">
+
+                        <a className="icon twitter-icon" href={`https://${strTwitter}`} target="_blank" rel="noreferrer noopener"><FontAwesomeIcon icon={faTwitter} /></a>
+                        <a  className="icon facebook-icon" href={`https://${strFacebook}`} target="_blank" rel="noreferrer noopener"><FontAwesomeIcon icon={faFacebook} /></a>
+                        <a className="icon instagram-icon" href={`https://${strInstagram}`} target="_blank" rel="noreferrer noopener"><FontAwesomeIcon icon={faInstagram} /></a>
+                        <a className="icon youtube-icon" href={`https://${strYoutube}`} target="_blank" rel="noreferrer noopener"><FontAwesomeIcon icon={faYoutube} /></a>             
+                        
+                    </div>
                 </div>
             </div>
         </>

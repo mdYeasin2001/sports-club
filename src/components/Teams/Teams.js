@@ -10,9 +10,11 @@ const Teams = () => {
             .catch(error => error);
     }, [])
     return (
-        <div className="container my-3">
-            <div className="row row-cols-1 row-cols-md-3 g-4">
-                {teams.map(team => <Team key={team.idTeam} team={team} />)}
+        <div className="py-5" style={{background: '#dfe6e9'}}>
+            <div className="container">
+                <div className="row row-cols-1 row-cols-md-3 g-4">
+                    {teams.map(team => <Team key={team.idTeam} team={team} />)}
+                </div>
             </div>
         </div>
     );

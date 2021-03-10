@@ -1,6 +1,6 @@
 .banner{
-    background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../images/banner.png') no-repeat;
-    height: 30vh;
+    background: radial-gradient(rgba(45, 52, 54, 0.5), rgba(45, 52, 54, 0.5)), url('../../images/banner.png') no-repeat;
+    height: 90vh;
     background-position: center center;
     background-size: cover;
     display: flex;

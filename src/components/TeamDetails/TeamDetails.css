@@ -1,13 +1,27 @@
 .teamBanner img{
     width: 100%;
 }
-.teamBanner{
-    height: 40vh;
-}
-.social-links{
-    text-align: center;
-    font-size: 3rem;
-}
 .icon{
-    padding: 0px 5px
+    padding: 0px 5px;
+    transition: all .5s;
+    font-size: 2rem;
+}
+.icon:hover{
+    color: #fff;
+    font-size: 1.8rem;
+}
+.facebook-icon{
+    color: #3b5998;
+}
+.instagram-icon{
+    color: #8a3ab9;
+}
+.twitter-icon{
+    color: #1DA1F2;
+}
+.youtube-icon{
+    color: #c4302b;
+}
+.team-detail-card{
+    background: #206a5d;
 }
