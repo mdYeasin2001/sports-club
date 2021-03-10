@@ -1,0 +1,13 @@
+.teamBanner img{
+    width: 100%;
+}
+.teamBanner{
+    height: 40vh;
+}
+.social-links{
+    text-align: center;
+    font-size: 3rem;
+}
+.icon{
+    padding: 0px 5px
+}
