@@ -8,8 +8,8 @@ Welcome to the sports club. From this website, you can find information about di
 
 ## Some features
 
-*You can see the details about a team by clicking on explore button.
-*You can find the contact information and social links on the team details page.
-*You can go there social page by clicking the social links on the team details page.
+1.You can see the details about a team by clicking on explore button.
+2.You can find the contact information and social links on the team details page.
+3.You can go there social page by clicking the social links on the team details page.
 
 Feel free to explore our website. You are most welcome.
