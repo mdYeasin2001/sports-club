@@ -1,23 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-light navbar-light">
             <div className="container">
-                <a className="navbar-brand fs-2 fw-bold" href="/">Sports<span style={{color: '#d63031'}}>Club</span></a>
+                <Link className="navbar-brand fs-2 fw-bold" to="/">Sports<span className="text-danger">Club</span></Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0 fs-6 fw-bold">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/home">Home</a>
+                            <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link disabled" href="/" tabindex="-1" aria-disabled="true">About</a>
+                            <Link className="nav-link disabled" to="/" tabIndex="-1" aria-disabled="true">About</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link disabled" href="/" tabindex="-1" aria-disabled="true">Contact</a>
+                            <Link className="nav-link disabled" to="/" tabIndex="-1" aria-disabled="true">Contact</Link>
                         </li>
                     </ul>
                     <form className="d-flex">

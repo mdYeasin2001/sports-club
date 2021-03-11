@@ -7,12 +7,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faYoutube, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faFlag, faMars, faFutbol, faClock } from '@fortawesome/free-solid-svg-icons';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import NotFound from '../NotFound/NotFound';
 
 const TeamDetails = () => {
     const { idTeam } = useParams();
     const [team, setTeam] = useState({});
     const { strTeamBanner, strTeam, strSport, strGender, intFormedYear, strDescriptionEN, strStadiumDescription, strFacebook, strInstagram, strTwitter, strYoutube, strCountry } = team;
-    console.log(team);
     useEffect(() => {
         fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${idTeam}`)
             .then(response => response.json())
@@ -24,8 +24,8 @@ const TeamDetails = () => {
             <div className="teamBanner">
                 <img src={strTeamBanner} alt="team-banner" />
             </div>
-            <div className="bg-dark text-muted">
-                <div className="container pt-3">
+            <div className="bg-light text-dark">
+                <div className="container p-3">
                     <div className="card mb-3 team-detail-card p-1" >
                         <div className="row g-0">
                             <div className="col-md-8">
@@ -40,7 +40,7 @@ const TeamDetails = () => {
                                 </div>
                             </div>
                             <div className="col-md-4">
-                                {strGender === 'Male' ? <img className="img-fluid" src={groupPhotoMale} alt="team" /> : <img className="img-fluid" src={groupPhotoFemale} alt="team" />}
+                                {strGender && (strGender === 'Male' ? <img className="img-fluid" src={groupPhotoMale} alt="team" /> : <img className="img-fluid" src={groupPhotoFemale} alt="team" />)}
                             </div>
                         </div>
                     </div>
@@ -49,12 +49,10 @@ const TeamDetails = () => {
                         <p className="lead">{strStadiumDescription}</p>
                     </div>
                     <div className="text-center">
-
                         <a className="icon twitter-icon" href={`https://${strTwitter}`} target="_blank" rel="noreferrer noopener"><FontAwesomeIcon icon={faTwitter} /></a>
-                        <a  className="icon facebook-icon" href={`https://${strFacebook}`} target="_blank" rel="noreferrer noopener"><FontAwesomeIcon icon={faFacebook} /></a>
+                        <a className="icon facebook-icon" href={`https://${strFacebook}`} target="_blank" rel="noreferrer noopener"><FontAwesomeIcon icon={faFacebook} /></a>
                         <a className="icon instagram-icon" href={`https://${strInstagram}`} target="_blank" rel="noreferrer noopener"><FontAwesomeIcon icon={faInstagram} /></a>
-                        <a className="icon youtube-icon" href={`https://${strYoutube}`} target="_blank" rel="noreferrer noopener"><FontAwesomeIcon icon={faYoutube} /></a>             
-                        
+                        <a className="icon youtube-icon" href={`https://${strYoutube}`} target="_blank" rel="noreferrer noopener"><FontAwesomeIcon icon={faYoutube} /></a>
                     </div>
                 </div>
             </div>

@@ -11,6 +11,7 @@ import {
 import TeamDetails from './components/TeamDetails/TeamDetails';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -19,15 +20,20 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home/>
+          <Footer/>
         </Route>
         <Route path="/home">
           <Home/>
+          <Footer/>
         </Route>
         <Route path="/teams/:idTeam">
           <TeamDetails/>
         </Route>
+        <Route path="*">
+          <NotFound/>
+        </Route>
       </Switch>
-      <Footer/>
+      
     </Router>
   );
 }

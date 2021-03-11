@@ -8,8 +8,8 @@ const Team = ({ team }) => {
     const { strTeam, strSport, strTeamBadge, idTeam } = team;
     
     return (
-        <div className="col team-card">
-            <div className="card">
+        <div className="col">
+            <div className="card shadow border-0 team-card">
                 <img src={strTeamBadge} className="img-fluid p-5" alt="badge"/>
                 <div className="card-body text-center">
                     <h4 className="card-title">{strTeam}</h4>

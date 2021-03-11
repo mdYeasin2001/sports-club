@@ -7,7 +7,7 @@
     font-size: 2rem;
 }
 .icon:hover{
-    color: #fff;
+    color: #2d3436;
     font-size: 1.8rem;
 }
 .facebook-icon{
@@ -23,5 +23,5 @@
     color: #c4302b;
 }
 .team-detail-card{
-    background: #206a5d;
+    background: black;
 }
