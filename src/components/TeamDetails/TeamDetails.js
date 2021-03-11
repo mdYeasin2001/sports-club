@@ -6,8 +6,6 @@ import groupPhotoFemale from '../../images/female.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faYoutube, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faFlag, faMars, faFutbol, faClock } from '@fortawesome/free-solid-svg-icons';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import NotFound from '../NotFound/NotFound';
 
 const TeamDetails = () => {
     const { idTeam } = useParams();
